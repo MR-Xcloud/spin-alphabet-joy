@@ -36,31 +36,31 @@ All colors MUST be HSL.
     --input: 217.2 32.6% 17.5%;
     --ring: 263 85% 65%;
 
-    /* Game Colors */
-    --game-primary: 263 85% 65%;
-    --game-secondary: 295 85% 65%;
-    --game-success: 142 76% 36%;
-    --game-warning: 48 96% 53%;
-    --game-danger: 0 84% 60%;
-    --game-info: 199 89% 48%;
+    /* Game Colors - Mitsubishi Electric Theme */
+    --game-primary: 0 100% 50%;  /* Mitsubishi Red */
+    --game-secondary: 0 80% 40%;  /* Deep Red */
+    --game-success: 0 70% 30%;    /* Dark Red */
+    --game-warning: 15 100% 50%;  /* Orange Red */
+    --game-danger: 345 100% 50%;  /* Pink Red */
+    --game-info: 0 0% 20%;        /* Dark Gray */
 
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(263 85% 65%), hsl(295 85% 65%));
-    --gradient-success: linear-gradient(135deg, hsl(142 76% 36%), hsl(120 76% 50%));
+    /* Gradients - Mitsubishi Theme */
+    --gradient-primary: linear-gradient(135deg, hsl(0 100% 50%), hsl(15 90% 45%));
+    --gradient-success: linear-gradient(135deg, hsl(0 70% 30%), hsl(0 100% 50%));
     --gradient-wheel: conic-gradient(
-      hsl(0 85% 65%), hsl(15 85% 65%), hsl(30 85% 65%), hsl(45 85% 65%),
-      hsl(60 85% 65%), hsl(75 85% 65%), hsl(90 85% 65%), hsl(105 85% 65%),
-      hsl(120 85% 65%), hsl(135 85% 65%), hsl(150 85% 65%), hsl(165 85% 65%),
-      hsl(180 85% 65%), hsl(195 85% 65%), hsl(210 85% 65%), hsl(225 85% 65%),
-      hsl(240 85% 65%), hsl(255 85% 65%), hsl(270 85% 65%), hsl(285 85% 65%),
-      hsl(300 85% 65%), hsl(315 85% 65%), hsl(330 85% 65%), hsl(345 85% 65%),
-      hsl(360 85% 65%), hsl(375 85% 65%)
+      hsl(0 100% 50%), hsl(5 95% 48%), hsl(10 90% 46%), hsl(15 85% 44%),
+      hsl(20 80% 42%), hsl(340 85% 45%), hsl(345 90% 47%), hsl(350 95% 49%),
+      hsl(355 100% 51%), hsl(0 90% 45%), hsl(5 85% 43%), hsl(10 80% 41%),
+      hsl(15 75% 39%), hsl(20 70% 37%), hsl(325 75% 40%), hsl(330 80% 42%),
+      hsl(335 85% 44%), hsl(340 90% 46%), hsl(345 95% 48%), hsl(350 100% 50%),
+      hsl(355 95% 48%), hsl(0 85% 43%), hsl(5 80% 41%), hsl(10 75% 39%),
+      hsl(15 70% 37%), hsl(320 70% 38%)
     );
 
-    /* Shadows */
-    --shadow-glow: 0 0 40px hsl(var(--game-primary) / 0.3);
-    --shadow-card: 0 10px 30px -10px hsl(0 0% 0% / 0.3);
-    --shadow-wheel: 0 20px 60px -10px hsl(var(--game-primary) / 0.4);
+    /* Shadows - Mitsubishi Theme */
+    --shadow-glow: 0 0 40px hsl(0 100% 50% / 0.4);
+    --shadow-card: 0 10px 30px -10px hsl(0 0% 0% / 0.4);
+    --shadow-wheel: 0 20px 60px -10px hsl(0 100% 50% / 0.3);
 
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);

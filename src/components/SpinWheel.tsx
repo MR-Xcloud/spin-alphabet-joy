@@ -14,10 +14,37 @@ const SpinWheel: React.FC<SpinWheelProps> = ({ onSpin }) => {
   // Generate alphabet segments
   const letters = Array.from({ length: 26 }, (_, i) => String.fromCharCode(65 + i));
   
-  // Generate colors for each segment
+  // Generate Mitsubishi Electric themed colors for each segment
   const getSegmentColor = (index: number) => {
-    const hue = (index * 360) / 26;
-    return `hsl(${hue}, 75%, 60%)`;
+    const mitsubishiColors = [
+      'hsl(0, 100%, 50%)',    // Pure Mitsubishi Red
+      'hsl(5, 95%, 48%)',     // Bright Red
+      'hsl(10, 90%, 46%)',    // Orange Red
+      'hsl(15, 85%, 44%)',    // Deep Orange Red
+      'hsl(0, 85%, 45%)',     // Darker Red
+      'hsl(345, 90%, 47%)',   // Pink Red
+      'hsl(350, 95%, 49%)',   // Light Pink Red
+      'hsl(355, 100%, 51%)',  // Bright Pink Red
+      'hsl(0, 80%, 40%)',     // Deep Red
+      'hsl(5, 85%, 43%)',     // Medium Red
+      'hsl(10, 80%, 41%)',    // Orange Medium
+      'hsl(15, 75%, 39%)',    // Deep Orange
+      'hsl(0, 75%, 38%)',     // Dark Red
+      'hsl(340, 85%, 45%)',   // Purple Red
+      'hsl(345, 90%, 47%)',   // Light Purple Red
+      'hsl(350, 95%, 49%)',   // Bright Purple Red
+      'hsl(0, 70%, 35%)',     // Very Dark Red
+      'hsl(5, 75%, 37%)',     // Dark Medium Red
+      'hsl(10, 70%, 35%)',    // Dark Orange
+      'hsl(15, 65%, 33%)',    // Very Dark Orange
+      'hsl(0, 65%, 32%)',     // Darkest Red
+      'hsl(335, 80%, 42%)',   // Deep Purple Red
+      'hsl(340, 85%, 44%)',   // Medium Purple Red
+      'hsl(345, 90%, 46%)',   // Light Purple Red
+      'hsl(0, 90%, 48%)',     // Bright Red Variant
+      'hsl(320, 70%, 38%)'    // Purple Variant
+    ];
+    return mitsubishiColors[index % mitsubishiColors.length];
   };
 
   const spinWheel = () => {
