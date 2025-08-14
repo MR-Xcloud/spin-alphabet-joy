@@ -38,11 +38,17 @@ const SpinWheel: React.FC<SpinWheelProps> = ({ onSpin }) => {
     const letter = letters[selectedIndex];
     
     if (wheelRef.current) {
-      wheelRef.current.style.setProperty('--spin-rotation', `${totalRotation}deg`);
-      wheelRef.current.style.animation = 'none';
+      // Reset any existing transform
+      wheelRef.current.style.transform = `rotate(0deg)`;
+      wheelRef.current.style.transition = 'none';
+      
       // Force reflow
-      wheelRef.current.offsetHeight;
-      wheelRef.current.style.animation = 'spin-wheel 3s cubic-bezier(0.17, 0.67, 0.12, 0.99)';
+      requestAnimationFrame(() => {
+        if (wheelRef.current) {
+          wheelRef.current.style.transition = 'transform 3s cubic-bezier(0.17, 0.67, 0.12, 0.99)';
+          wheelRef.current.style.transform = `rotate(${totalRotation}deg)`;
+        }
+      });
     }
     
     // Set result after animation completes
@@ -58,8 +64,8 @@ const SpinWheel: React.FC<SpinWheelProps> = ({ onSpin }) => {
       {/* Wheel Container */}
       <div className="relative">
         {/* Pointer */}
-        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-2 z-10">
-          <div className="w-0 h-0 border-l-[15px] border-r-[15px] border-b-[30px] border-l-transparent border-r-transparent border-b-foreground drop-shadow-md"></div>
+        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 translate-y-2 z-10">
+          <div className="w-0 h-0 border-l-[15px] border-r-[15px] border-t-[30px] border-l-transparent border-r-transparent border-t-foreground drop-shadow-md"></div>
         </div>
         
         {/* Wheel */}
