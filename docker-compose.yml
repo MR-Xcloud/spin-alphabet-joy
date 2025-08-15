@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  spin-alphabet-joy:
+    # build: .
+    image: vinay0981123/spin:latest
+    container_name: spin-alphabet-joy
+    ports:
+      - "8548:8548" # host:container
+    networks:
+      - spinnet
+    restart: unless-stopped
+
+networks:
+  spinnet:
+    driver: bridge
