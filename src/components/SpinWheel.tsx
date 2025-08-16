@@ -16,8 +16,10 @@ const SpinWheel: React.FC<SpinWheelProps> = ({ onSpin }) => {
   const [foundUser, setFoundUser] = useState(null);
   const [user, setUser] = useState({
     full_name: "",
-    email: "",
-    employee_id: "",
+    // email: "",
+    // employee_id: "",
+    phone_number: "",
+    company_name: "",
   });
 
   // Generate alphabet segments
@@ -228,15 +230,15 @@ const SpinWheel: React.FC<SpinWheelProps> = ({ onSpin }) => {
                 >
                   <div className="flex justify-between">
                     <span className="text-muted-foreground">Name:</span>
-                    <span className="font-medium">{user?.full_name}</span>
+                    <span className="font-medium">{user?.full_name ? user?.full_name : "-"}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-muted-foreground">Email:</span>
-                    <span className="font-medium">{user?.email}</span>
+                    <span className="text-muted-foreground">Phone Number:</span>
+                    <span className="font-medium">{user?.phone_number ? user?.phone_number : "-"}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-muted-foreground">Employee ID:</span>
-                    <span className="font-medium">{user?.employee_id}</span>
+                    <span className="text-muted-foreground">Company Name:</span>
+                    <span className="font-medium">{user?.company_name ? user?.company_name : "-"}</span>
                   </div>
                   {/* <div 
               className="text-6xl md:text-8xl font-bold text-white px-6 py-4 rounded-2xl shadow-lg inline-block"
