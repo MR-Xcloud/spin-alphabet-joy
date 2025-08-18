@@ -23,10 +23,15 @@ const Index = () => {
         {/* <h1 className="text-4xl md:text-6xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-4"> */}
         <MitsubishiLogo />
         {/* </h1> */}
-        <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+        {/* <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+          
+          The wheel will have the names of the people who have scanned the QR
+          code.
+        </p> */}
+        <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto p-2">
           {/* Test your luck with our professional spin wheel! Click the button to
           spin and discover your lucky letter. */}
-          The wheel will have the names of the people who have scanned the QR code.
+          The Winner Is:
         </p>
       </header>
 
