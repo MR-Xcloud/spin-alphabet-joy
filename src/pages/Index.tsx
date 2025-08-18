@@ -34,7 +34,7 @@ const Index = () => {
         <SpinWheel onSpin={handleSpin} />
 
         {/* Stats */}
-        {gameStats.totalSpins > 0 && (
+        {/* {gameStats.totalSpins > 0 && (
           <Card className="mt-8 p-6 bg-card/50 backdrop-blur-sm border-border/50">
             <div className="text-center space-y-4">
               <h3 className="text-lg font-semibold text-foreground">
@@ -67,7 +67,7 @@ const Index = () => {
               </div>
             </div>
           </Card>
-        )}
+        )} */}
       </main>
 
       {/* Footer */}

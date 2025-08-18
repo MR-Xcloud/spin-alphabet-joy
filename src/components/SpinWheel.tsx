@@ -228,17 +228,32 @@ const SpinWheel: React.FC<SpinWheelProps> = ({ onSpin }) => {
                     textShadow: "2px 2px 4px rgba(0,0,0,0.5)",
                   }}
                 >
-                  <div className="flex justify-between">
+                  <div
+                    className="flex justify-between"
+                    style={{ fontSize: "large" }}
+                  >
                     <span className="text-muted-foreground">Name:</span>
-                    <span className="font-medium">{user?.full_name ? user?.full_name : "-"}</span>
+                    <span className="font-medium">
+                      {user?.full_name ? user?.full_name : "-"}
+                    </span>
                   </div>
-                  <div className="flex justify-between">
+                  <div
+                    className="flex justify-between"
+                    style={{ fontSize: "large" }}
+                  >
                     <span className="text-muted-foreground">Phone Number:</span>
-                    <span className="font-medium">{user?.phone_number ? user?.phone_number : "-"}</span>
+                    <span className="font-medium">
+                      {user?.phone_number ? user?.phone_number : "-"}
+                    </span>
                   </div>
-                  <div className="flex justify-between">
+                  <div
+                    className="flex justify-between"
+                    style={{ fontSize: "large" }}
+                  >
                     <span className="text-muted-foreground">Company Name:</span>
-                    <span className="font-medium">{user?.company_name ? user?.company_name : "-"}</span>
+                    <span className="font-medium">
+                      {user?.company_name ? user?.company_name : "-"}
+                    </span>
                   </div>
                   {/* <div 
               className="text-6xl md:text-8xl font-bold text-white px-6 py-4 rounded-2xl shadow-lg inline-block"

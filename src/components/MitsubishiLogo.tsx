@@ -1,5 +1,5 @@
 import mitsubishiLogo from "./assets/mitsubishi-electric-logo.png";
-
+import mitsuLatestLogo from "./assets/mitsu-latest-logo.png";
 const MitsubishiLogo = ({ className = "" }: { className?: string }) => {
   return (
     <div
@@ -11,9 +11,10 @@ const MitsubishiLogo = ({ className = "" }: { className?: string }) => {
       }}
     >
       <img
-        src={mitsubishiLogo}
+        src={mitsuLatestLogo}
         alt="Mitsubishi Electric"
         className="h-8 w-auto"
+        style={{height:"3rem", width:"10rem"}} //w-120px
       />
       <div className="flex flex-col">
         <span className="text-lg font-bold text-mitsubishi-gray">
