@@ -126,7 +126,7 @@ const SpinWheel: React.FC<SpinWheelProps> = ({ onSpin }) => {
       requestAnimationFrame(() => {
         if (wheelRef.current) {
           wheelRef.current.style.transition =
-            "transform 3s cubic-bezier(0.17, 0.67, 0.12, 0.99)";
+            "transform 15s cubic-bezier(0.17, 0.67, 0.12, 0.99)";
           wheelRef.current.style.transform = `rotate(${totalRotation}deg)`;
         }
       });
@@ -137,7 +137,7 @@ const SpinWheel: React.FC<SpinWheelProps> = ({ onSpin }) => {
       setSelectedLetter(letter);
       setIsSpinning(false);
       onSpin?.(letter);
-    }, 3000);
+    }, 15000);
   };
 
   return (
