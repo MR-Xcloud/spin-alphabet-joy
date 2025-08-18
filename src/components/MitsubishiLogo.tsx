@@ -16,14 +16,14 @@ const MitsubishiLogo = ({ className = "" }: { className?: string }) => {
         className="h-8 w-auto"
         style={{height:"3rem", width:"10rem"}} //w-120px
       />
-      <div className="flex flex-col">
+      {/* <div className="flex flex-col">
         <span className="text-lg font-bold text-mitsubishi-gray">
           MITSUBISHI
         </span>
         <span className="text-xs font-medium text-mitsubishi-gray/70">
           ELECTRIC
         </span>
-      </div>
+      </div> */}
     </div>
   );
 };

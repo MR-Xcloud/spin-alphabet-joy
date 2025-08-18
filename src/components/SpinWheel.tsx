@@ -237,7 +237,7 @@ const SpinWheel: React.FC<SpinWheelProps> = ({ onSpin }) => {
                       {user?.full_name ? user?.full_name : "-"}
                     </span>
                   </div>
-                  <div
+                  {/* <div
                     className="flex justify-between"
                     style={{ fontSize: "large" }}
                   >
@@ -245,7 +245,7 @@ const SpinWheel: React.FC<SpinWheelProps> = ({ onSpin }) => {
                     <span className="font-medium">
                       {user?.phone_number ? user?.phone_number : "-"}
                     </span>
-                  </div>
+                  </div> */}
                   <div
                     className="flex justify-between"
                     style={{ fontSize: "large" }}
